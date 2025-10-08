@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R Robotik - Engineering the Future of Indonesian Industry</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f5f6fa;
+    }
+
+    header {
+      background-color: #0a3d62;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    nav {
+      background-color: #1e3799;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffb142;
+    }
+
+    section {
+      padding: 50px 10%;
+      background-color: white;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      color: #0a3d62;
+      border-bottom: 3px solid #1e3799;
+      padding-bottom: 5px;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .product-card {
+      background-color: #f1f2f6;
+      border-radius: 10px;
+      padding: 20px;
+      width: 280px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card h3 {
+      color: #1e3799;
+    }
+
+    footer {
+      background-color: #1e3799;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .products {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      section {
+        padding: 30px 5%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>R Robotik</h1>
+    <p>Engineering the Future of Indonesian Industry</p>
+  </header>
+
+  <nav>
+    <a href="#profil">Profil</a>
+    <a href="#produk">Produk</a>
+    <a href="#alasan">Alasan</a>
+    <a href="#strategi">Strategi</a>
+    <a href="#karakter">Karakter</a>
+  </nav>
+
+  <section id="profil">
+    <h2>Profil Perusahaan</h2>
+    <p><strong>Nama Perusahaan:</strong> R Robotik</p>
+    <p><strong>Makna dan Filosofi:</strong> Huruf ‘R’ merepresentasikan tiga pilar utama perusahaan: <br>
+    Rekayasa (Engineering), Revolusi (Revolution), dan Republik (Republic).</p>
+    <p><strong>Tagline:</strong> Engineering the Future of Indonesian Industry.</p>
+    <p><strong>Bidang Usaha:</strong> Robotika Industri & Otomatisasi Pabrik.</p>
+  </section>
+
+  <section id="produk">
+    <h2>Produk dan Layanan</h2>
+    <div class="products">
+      <div class="product-card">
+        <h3>RR-Arm Series 1</h3>
+        <p>Lengan robot 6-axis untuk pick & place, assembly, welding, dan quality control. Fleksibel dan aman untuk bekerja berdampingan dengan manusia.</p>
+      </div>
+      <div class="product-card">
+        <h3>RR-AGV</h3>
+        <p>Robot logistik otomatis untuk memindahkan barang dan material di pabrik atau gudang, meningkatkan efisiensi dan keamanan.</p>
+      </div>
+      <div class="product-card">
+        <h3>RR-Vision System</h3>
+        <p>Sistem visi berbasis AI untuk inspeksi produk, memilah barang, dan memandu gerakan robot dengan presisi tinggi.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="alasan">
+    <h2>Alasan Pembuatan Produk</h2>
+    <ul>
+      <li>Peningkatan efisiensi dan kualitas produksi di industri manufaktur.</li>
+      <li>Meningkatkan keamanan kerja dengan menggantikan tugas berisiko tinggi.</li>
+      <li>Mendukung program pemerintah dalam transformasi Industri 4.0.</li>
+    </ul>
+  </section>
+
+  <section id="strategi">
+    <h2>Strategi Pemasaran</h2>
+    <p><strong>Pemasaran Digital:</strong> Website profesional, SEO, dan LinkedIn untuk B2B marketing.</p>
+    <p><strong>Pemasaran Langsung:</strong> Mengikuti pameran industri dan demo produk ke perusahaan target.</p>
+    <p><strong>Pemasaran Konten:</strong> Artikel, video, dan webinar edukatif seputar otomasi industri.</p>
+  </section>
+
+  <section id="karakter">
+    <h2>Sikap dan Karakter Wirausaha</h2>
+    <ul>
+      <li>Inovatif dan visioner</li>
+      <li>Berorientasi pada solusi</li>
+      <li>Adaptif dan fleksibel</li>
+      <li>Berintegritas tinggi</li>
+      <li>Kolaboratif dan gigih</li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> R Robotik. All Rights Reserved.
+  </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const id = link.getAttribute('href').substring(1);
+        const target = document.getElementById(id);
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 60,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Footer year update
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Simple animation
+    window.addEventListener('DOMContentLoaded', () => {
+      const title = document.querySelector('header h1');
+      title.style.opacity = 0;
+      title.style.transform = 'translateY(-20px)';
+      setTimeout(() => {
+        title.style.transition = 'all 1s ease';
+        title.style.opacity = 1;
+        title.style.transform = 'translateY(0)';
+      }, 300);
+    });
+  </script>
+
+</body>
+</html>
